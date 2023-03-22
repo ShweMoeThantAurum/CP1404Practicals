@@ -18,7 +18,7 @@ def main():
 
 def show_stars(score):
     for i in range(score):
-        print("*" * i, end=" ")
+        print("*", end="")
 
 
 def print_result(score):
