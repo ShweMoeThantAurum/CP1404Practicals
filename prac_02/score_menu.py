@@ -8,13 +8,17 @@ def main():
         elif choice == "P":
             print_result(score)
         elif choice == "S":
-            for i in range(score):
-                print("*" * i)
+            show_stars(score)
         else:
             print("Invalid choice")
         print(MENU)
         choice = input(">>> ").upper()
     print("Farewell")
+
+
+def show_stars(score):
+    for i in range(score):
+        print("*" * i)
 
 
 def print_result(score):
