@@ -1,7 +1,11 @@
 def main():
+    import random
     score = float(input("Enter score: "))
     message = get_result(score)
     print(message)
+    random_score = random.randint(0, 100)
+    score = random_score
+    print(get_result(score))
 
 
 def get_result(score):
