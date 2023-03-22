@@ -1,3 +1,7 @@
+MINIMUM_SCORE = 0
+MAXIMUM_SCORE = 100
+
+
 def main():
     MENU = "(G)et a valid score\n(P)rint result\n(S)how stars\n(Q)uit"
     print(MENU)
@@ -23,7 +27,7 @@ def show_stars(score):
 
 
 def print_result(score):
-    if score < 0 or score > 100:
+    if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         message = "Invalid score"
     elif score >= 90:
         message = "Excellent"
@@ -36,11 +40,10 @@ def print_result(score):
 
 def get_valid_score():
     score = int(input("Score: "))
-    while score < 0 or score > 100:
+    while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score")
         score = int(input("Score: "))
     return score
 
 
 main()
-
