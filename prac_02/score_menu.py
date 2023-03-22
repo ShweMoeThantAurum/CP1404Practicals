@@ -6,15 +6,7 @@ def main():
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            if score < 0 or score > 100:
-                message = "Invalid score"
-            elif score >= 90:
-                message = "Excellent"
-            elif score >= 50:
-                message = "Passable"
-            else:
-                message = "Bad"
-            print(message)
+            print_result(score)
         elif choice == "S":
             for i in range(score):
                 print("*" * i)
@@ -23,6 +15,18 @@ def main():
         print(MENU)
         choice = input(">>> ").upper()
     print("Farewell")
+
+
+def print_result(score):
+    if score < 0 or score > 100:
+        message = "Invalid score"
+    elif score >= 90:
+        message = "Excellent"
+    elif score >= 50:
+        message = "Passable"
+    else:
+        message = "Bad"
+    print(message)
 
 
 def get_valid_score():
