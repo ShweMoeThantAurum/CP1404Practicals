@@ -8,6 +8,7 @@ def main():
 
 
 def get_password():
+    """Get the password from the user."""
     password = input("Enter your password: ")
     return password
 
