@@ -21,12 +21,14 @@ def main():
 
 
 def show_stars(score):
+    """Print as many stars as the score."""
     for i in range(score):
         print("*", end="")
     print()
 
 
 def print_result(score):
+    """Determine the result of the score."""
     if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         message = "Invalid score"
     elif score >= 90:
@@ -39,6 +41,7 @@ def print_result(score):
 
 
 def get_valid_score():
+    """Check whether the score input is valid or not."""
     score = int(input("Score: "))
     while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score")
