@@ -10,7 +10,7 @@ def main():
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            print_result(score)
+            print_result(score) # No problem with potential undefinable variable
         elif choice == "S":
             show_stars(score)
         else:
