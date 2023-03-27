@@ -12,12 +12,13 @@ def main():
             score = get_valid_score()
         elif choice == "P":
             if score == 0:
-                get_valid_score()
+                score = get_valid_score()
+            elif score is not None:
                 print_result(score)
         elif choice == "S":
             if score == 0:
-                get_valid_score()
-                show_stars(score)
+                score = get_valid_score()
+            show_stars(score)
         else:
             print("Invalid choice")
         print(MENU)
@@ -47,11 +48,14 @@ def print_result(score):
 
 def get_valid_score():
     """Check whether the score input is valid or not."""
-    score = int(input("Score: "))
-    while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
-        print("Invalid score")
-        score = int(input("Score: "))
-    return score
+    valid_input = False
+    while not valid_input:
+        try:
+            score = int(input("Score: "))
+            valid_input = True
+        except ValueError:
+            print("Not a valid integer")
+    return score  # No problem with potential undefinable variable
 
 
 main()
