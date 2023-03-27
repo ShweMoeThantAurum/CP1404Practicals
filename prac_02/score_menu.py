@@ -3,6 +3,7 @@ MAXIMUM_SCORE = 100
 
 
 def main():
+    score = 0
     MENU = "(G)et a valid score\n(P)rint result\n(S)how stars\n(Q)uit"
     print(MENU)
     choice = input(">>> ").upper()
@@ -10,9 +11,13 @@ def main():
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            print_result(score) # No problem with potential undefinable variable
+            if score == 0:
+                get_valid_score()
+                print_result(score)
         elif choice == "S":
-            show_stars(score)
+            if score == 0:
+                get_valid_score()
+                show_stars(score)
         else:
             print("Invalid choice")
         print(MENU)
