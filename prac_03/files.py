@@ -16,7 +16,10 @@ line_2 = int(in_file.readline().strip())
 print(f"{line_1 + line_2}")
 
 # 4
+total = 0
 in_file = open("numbers.txt", "r")
-text = in_file.read().strip()
-print(text)
+for line in in_file:
+    number = int(line)
+    total += number
 in_file.close()
+print(total)
