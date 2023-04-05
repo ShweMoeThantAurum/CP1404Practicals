@@ -49,5 +49,3 @@ print([number for number in numbers if number > 9])
 last_names = [full_name.split()[1:][0] for full_name in full_names]
 for last_name in last_names:
     print(last_name, end=" ")
-# full_initials = [name.split()[0][0] + name.split()[1][0] for name in full_names]
-# print(full_initials)
