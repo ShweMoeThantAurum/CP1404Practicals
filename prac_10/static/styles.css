@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    margin: 0;
+}
+
+#nav, #footer {
+    background-color: #eee;
+    padding: 1em;
+}
+
+#content {
+    margin-left: 3em;
+}
+
+/* Custom CSS for results.html */
+
+.page-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-title {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.summary-text {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.read-more {
+    margin-top: 20px;
+}
+
+.error-message {
+    color: #FF0000;
+    font-size: 24px;
+    font-weight: bold;
+}

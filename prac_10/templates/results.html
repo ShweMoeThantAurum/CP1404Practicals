@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Wikipedia Results{% endblock %}
+
+{% block content %}
+{% if page %}
+    <h2 class="page-title">{{ page.title }}</h2>
+    <div class="summary-container">
+        <h2 class="section-title">Summary</h2>
+        <p class="summary-text">{{ page.summary }}</p>
+        <p class="read-more"><a href="{{ page.url }}">Read more</a></p>
+    </div>
+{% else %}
+    <h1 class="error-message">No Results Found</h1>
+{% endif %}
+{% endblock %}
