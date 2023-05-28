@@ -23,4 +23,3 @@ while name != "":
 with open(FILENAME, "w") as out_file:
     for guitar in guitars:
         out_file.write(str(guitar) + "\n")
-
